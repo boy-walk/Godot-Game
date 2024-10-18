@@ -1,0 +1,7 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1729210864
+icon.svg::CompressedTexture2D::5744550542957666748::1729206616::1729206634::1::::<><>::
+level1.tscn::PackedScene::8370391318130289030::1729210596::0::1::::<><>::uid://ceyoe417maq35::::res://player.tscn
+player.gd::GDScript::-1::1729210278::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::5104000553922174422::1729210596::0::1::::<><>::res://player.gd<>uid://cxcnvs7ouifxf::::res://png-clipart-stick-figure-computer-icons-others-text-logo-thumbnail.png
+png-clipart-stick-figure-computer-icons-others-text-logo-thumbnail.png::CompressedTexture2D::6392141344664220903::1729209474::1729209474::1::::<><>::
