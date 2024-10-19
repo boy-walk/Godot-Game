@@ -9,7 +9,7 @@ distance = -146.0
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_l7f4w")]
-position = Vector2(-133, -88)
+position = Vector2(-41, 69)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -18,4 +18,5 @@ position = Vector2(1, -24)
 shape = SubResource("WorldBoundaryShape2D_in0rl")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(55, 95)
+position = Vector2(3, 107)
+zoom = Vector2(4, 4)

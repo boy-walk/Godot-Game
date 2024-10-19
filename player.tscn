@@ -1,19 +1,70 @@
-[gd_scene load_steps=4 format=3 uid="uid://ceyoe417maq35"]
+[gd_scene load_steps=11 format=3 uid="uid://ceyoe417maq35"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_fa2sk"]
-[ext_resource type="Texture2D" uid="uid://cxcnvs7ouifxf" path="res://png-clipart-stick-figure-computer-icons-others-text-logo-thumbnail.png" id="1_jri1d"]
+[ext_resource type="Texture2D" uid="uid://c2rkuw8o2ar5s" path="res://idle-sprite-sheet.png" id="2_ivbxi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g3404"]
-radius = 44.0114
+radius = 8.94427
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krob5"]
+atlas = ExtResource("2_ivbxi")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yx72o"]
+atlas = ExtResource("2_ivbxi")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s40b2"]
+atlas = ExtResource("2_ivbxi")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oec20"]
+atlas = ExtResource("2_ivbxi")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g61un"]
+atlas = ExtResource("2_ivbxi")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3p2ad"]
+atlas = ExtResource("2_ivbxi")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xvul7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krob5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yx72o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s40b2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oec20")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g61un")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3p2ad")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_fa2sk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8, -53)
+position = Vector2(42, -13)
 shape = SubResource("CircleShape2D_g3404")
 
-[node name="Png-clipart-stick-figure-computer-icons-others-text-logo-thumbnail" type="Sprite2D" parent="."]
-position = Vector2(7, -54)
-scale = Vector2(0.186782, 0.186782)
-texture = ExtResource("1_jri1d")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(42, -20)
+sprite_frames = SubResource("SpriteFrames_xvul7")
+autoplay = "default"
+frame_progress = 0.39443
