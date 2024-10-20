@@ -1,9 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1729416599
+::res://::1729418328
 icon.svg::CompressedTexture2D::5744550542957666748::1729206616::1729206634::1::::<><>::
 idle-sprite-sheet.png::CompressedTexture2D::6703678660402301826::1729332629::1729332630::1::::<><>::
-level1.tscn::PackedScene::8370391318130289030::1729332910::0::1::::<><>::uid://ceyoe417maq35::::res://player.tscn
-player.gd::GDScript::-1::1729332735::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::5104000553922174422::1729332910::0::1::::<><>::res://player.gd<>uid://c2rkuw8o2ar5s::::res://idle-sprite-sheet.png
+level1.tscn::PackedScene::8370391318130289030::1729417164::0::1::::<><>::uid://ceyoe417maq35::::res://player.tscn
+player.gd::GDScript::-1::1729417061::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::5104000553922174422::1729417164::0::1::::<><>::res://player.gd<>uid://c2rkuw8o2ar5s::::res://idle-sprite-sheet.png<>uid://3bwewjthh1bq::::res://walk.png
 png-clipart-stick-figure-computer-icons-others-text-logo-thumbnail.png::CompressedTexture2D::6392141344664220903::1729209474::1729209474::1::::<><>::
+simple-grass-sprites.png::CompressedTexture2D::6304504799704636726::1729417971::1729417972::1::::<><>::
 walk.png::CompressedTexture2D::1968696086925323874::1729416599::1729416599::1::::<><>::
