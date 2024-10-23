@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bosnscnatexsw"]
+
+[ext_resource type="Script" path="res://gun.gd" id="1_enxt5"]
+[ext_resource type="Texture2D" uid="uid://jncaagsxib80" path="res://gun.png" id="1_m2egs"]
+
+[sub_resource type="GDScript" id="GDScript_g6p7b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7bahr"]
+radius = 5.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(5, 2)
+script = ExtResource("1_enxt5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7, 1)
+texture = ExtResource("1_m2egs")
+script = SubResource("GDScript_g6p7b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 1)
+shape = SubResource("CircleShape2D_7bahr")
+disabled = true

@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://bta8m8j16bhcr"]
+
+[ext_resource type="Texture2D" uid="uid://dkmkytpdbq5c2" path="res://bullet.png" id="1_wiujb"]
+
+[sub_resource type="GDScript" id="GDScript_4krls"]
+script/source = "extends CharacterBody2D
+
+const Player = preload(\"res://player.gd\")
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	look_at(Vector2(1,0))
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	move_and_collide(Vector2(1,0))
+	print(\"SHOOOOOT\")
+	
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6rq06"]
+radius = 2.23607
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = SubResource("GDScript_4krls")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wiujb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 0)
+shape = SubResource("CircleShape2D_6rq06")

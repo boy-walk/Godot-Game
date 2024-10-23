@@ -1,25 +1,42 @@
-[gd_scene load_steps=5 format=4 uid="uid://drixefeico4s5"]
+[gd_scene load_steps=6 format=4 uid="uid://drixefeico4s5"]
 
+[ext_resource type="Script" path="res://level_1.gd" id="1_3rwgp"]
 [ext_resource type="PackedScene" uid="uid://ceyoe417maq35" path="res://player.tscn" id="1_l7f4w"]
-[ext_resource type="Texture2D" uid="uid://cv27jjsc4fpni" path="res://simple-grass-sprites.png" id="2_311pn"]
+[ext_resource type="Texture2D" uid="uid://clr5vv13kdxmn" path="res://grass-sprite-sheet.png" id="2_ccrvm"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bk360"]
-texture = ExtResource("2_311pn")
-0:0/size_in_atlas = Vector2i(2, 2)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.1309, -15.9099, 15.8657, -15.2028, 15.5122, 15.6447, 15.5122, 15.8215, -16.1309, 16.1751)
-2:0/size_in_atlas = Vector2i(2, 2)
-2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.1309, -15.9099, 15.8657, -15.2028, 15.5122, 15.6447, 15.5122, 15.8215, -16.1309, 16.1751)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ppqo"]
+texture = ExtResource("2_ccrvm")
 4:0/size_in_atlas = Vector2i(2, 2)
 4:0/0 = 0
-4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.1309, -15.9099, 15.8657, -15.2028, 15.5122, 15.6447, 15.5122, 15.8215, -16.1309, 16.1751)
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:0/size_in_atlas = Vector2i(2, 2)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:0/size_in_atlas = Vector2i(2, 2)
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:2/size_in_atlas = Vector2i(2, 2)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:2/size_in_atlas = Vector2i(2, 2)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:2/size_in_atlas = Vector2i(2, 2)
+8:2/0 = 0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:4/size_in_atlas = Vector2i(2, 2)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+8:4/size_in_atlas = Vector2i(2, 2)
+8:4/0 = 0
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSet" id="TileSet_xouiv"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_bk360")
+sources/1 = SubResource("TileSetAtlasSource_6ppqo")
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_3rwgp")
 
 [node name="Player" parent="." instance=ExtResource("1_l7f4w")]
 position = Vector2(-41, 69)
@@ -29,5 +46,5 @@ position = Vector2(42, -20)
 zoom = Vector2(4, 4)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAD1/woAAAAAAAAAAAD3/woAAAAAAAAAAAD5/woAAAAAAAAAAAD7/woAAAAAAAAAAAD9/woAAAAAAAAAAAD//woAAAAAAAAAAAABAAoAAAAAAAAAAAADAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAJAAoAAAAAAAAAAAALAAoAAAAAAAAAAAANAAoAAAACAAAAAADz/woAAAAEAAAAAAALAAUAAAAEAAAAAAANAAUAAAACAAAAAAASAAAAAAAEAAAAAAAUAAAAAAACAAAAAAA=")
+tile_map_data = PackedByteArray("AAD3/wcAAQAGAAAAAAD5/wcAAQAGAAAAAAD7/wcAAQAGAAAAAAD9/wcAAQAGAAAAAAD//wcAAQAGAAAAAAABAAcAAQAGAAAAAAADAAcAAQAGAAAAAAAFAAcAAQAGAAAAAAAHAAcAAQAGAAAAAAAJAAcAAQAIAAAAAAD1/wcAAQAEAAAAAAD1/wkAAQAGAAQAAAD1/wsAAQAGAAQAAAD1/w0AAQAGAAQAAAD1/w8AAQAGAAQAAAD1/xEAAQAGAAQAAAD1/xMAAQAGAAQAAAAJAAkAAQAIAAQAAAAJAAsAAQAIAAQAAAAJAA0AAQAIAAQAAAAJAA8AAQAIAAQAAAAJABEAAQAIAAQAAAAJABMAAQAIAAQAAAAQAAIAAQAEAAAAAAAQAAQAAQAEAAIAAAASAAIAAQAGAAAAAAASAAQAAQAGAAIAAAAUAAIAAQAIAAAAAAAUAAQAAQAIAAIAAAAbAP3/AQAEAAAAAAAbAP//AQAEAAIAAAAdAP3/AQAGAAAAAAAdAP//AQAGAAIAAAAfAP3/AQAIAAAAAAAfAP//AQAIAAIAAAAlAPj/AQAEAAAAAAAlAPr/AQAEAAIAAAAnAPj/AQAGAAAAAAAnAPr/AQAGAAIAAAApAPj/AQAIAAAAAAApAPr/AQAIAAIAAAAaAPH/AQAEAAAAAAAaAPP/AQAEAAIAAAAcAPH/AQAGAAAAAAAcAPP/AQAGAAIAAAAeAPH/AQAIAAAAAAAeAPP/AQAIAAIAAAAmAOr/AQAEAAAAAAAmAOz/AQAEAAIAAAAoAOr/AQAGAAAAAAAoAOz/AQAGAAIAAAAqAOr/AQAIAAAAAAAqAOz/AQAIAAIAAAAbAOP/AQAEAAAAAAAbAOX/AQAEAAIAAAAdAOP/AQAGAAAAAAAdAOX/AQAGAAIAAAAfAOP/AQAIAAAAAAAfAOX/AQAIAAIAAAAPANz/AQAEAAAAAAAPAN7/AQAEAAIAAAARANz/AQAGAAAAAAARAN7/AQAGAAIAAAATANz/AQAIAAAAAAATAN7/AQAIAAIAAAAHANz/AQAIAAAAAAAFANz/AQAGAAAAAAAEANz/AQAGAAAAAAADANz/AQAGAAAAAAACANz/AQAGAAAAAAABANz/AQAGAAAAAAAAANz/AQAGAAAAAAD//9z/AQAGAAAAAAD+/9z/AQAGAAAAAAD9/9z/AQAGAAAAAAD8/9z/AQAGAAAAAAD7/9z/AQAGAAAAAAD6/9z/AQAGAAAAAAD5/9z/AQAGAAAAAAD4/9z/AQAGAAAAAAD3/9z/AQAGAAAAAAD1/9z/AQAEAAAAAAD1/97/AQAEAAIAAAD3/97/AQAGAAIAAAD5/97/AQAGAAIAAAD7/97/AQAGAAIAAAD9/97/AQAGAAIAAAD//97/AQAGAAIAAAABAN7/AQAGAAIAAAADAN7/AQAGAAIAAAAFAN7/AQAGAAIAAAAHAN7/AQAIAAIAAAA=")
 tile_set = SubResource("TileSet_xouiv")
